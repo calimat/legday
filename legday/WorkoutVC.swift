@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WorkoutVC.swift
 //  legday
 //
 //  Created by Ricardo Herrera Petit on 3/29/19.
@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WorkoutVC: UIViewController {
 
+    @IBOutlet weak var typeLabel: UILabel!
+    
+    @IBOutlet weak var timerLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        typeLabel.isHidden = true
+        timerLbl.isHidden = true
         // Do any additional setup after loading the view.
     }
 
