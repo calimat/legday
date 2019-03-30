@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class WorkoutVC: UIViewController {
 
@@ -18,7 +19,14 @@ class WorkoutVC: UIViewController {
         super.viewDidLoad()
         typeLabel.isHidden = true
         timerLbl.isHidden = true
-        // Do any additional setup after loading the view.
+        
+        INPreferences.requestSiriAuthorization { (status) in
+            if status == .authorized {
+                debugPrint("SiriKit: Authorized")
+            } else {
+                debugPrint("SiriKit: Unauthorized")
+            }
+        }
     }
 
 
