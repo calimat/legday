@@ -14,6 +14,7 @@
 		F6E2B743224EF9260006F0E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E2B741224EF9260006F0E9 /* LaunchScreen.storyboard */; };
 		F6E2B752224EFD840006F0E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2B751224EFD840006F0E9 /* IntentHandler.swift */; };
 		F6E2B756224EFD840006F0E9 /* intentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F6E2B74F224EFD840006F0E9 /* intentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F6E2B75F224F04100006F0E9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2B75E224F04100006F0E9 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F6E2B74F224EFD840006F0E9 /* intentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = intentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E2B751224EFD840006F0E9 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F6E2B753224EFD840006F0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E2B75E224F04100006F0E9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,11 @@
 		F6E2B737224EF9240006F0E9 /* legday */ = {
 			isa = PBXGroup;
 			children = (
+				F6E2B75C224F03EE0006F0E9 /* Services */,
+				F6E2B75B224F03E30006F0E9 /* Controller */,
+				F6E2B75D224F03F60006F0E9 /* Extensions */,
 				F6E2B74A224EFCB00006F0E9 /* legday.entitlements */,
 				F6E2B738224EF9240006F0E9 /* AppDelegate.swift */,
-				F6E2B73A224EF9240006F0E9 /* WorkoutVC.swift */,
 				F6E2B73C224EF9240006F0E9 /* Main.storyboard */,
 				F6E2B73F224EF9260006F0E9 /* Assets.xcassets */,
 				F6E2B741224EF9260006F0E9 /* LaunchScreen.storyboard */,
@@ -111,6 +115,29 @@
 				F6E2B753224EFD840006F0E9 /* Info.plist */,
 			);
 			path = intentHandler;
+			sourceTree = "<group>";
+		};
+		F6E2B75B224F03E30006F0E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2B73A224EF9240006F0E9 /* WorkoutVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E2B75C224F03EE0006F0E9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2B75E224F04100006F0E9 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6E2B75D224F03F60006F0E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E2B75F224F04100006F0E9 /* DataService.swift in Sources */,
 				F6E2B73B224EF9240006F0E9 /* WorkoutVC.swift in Sources */,
 				F6E2B739224EF9240006F0E9 /* AppDelegate.swift in Sources */,
 			);

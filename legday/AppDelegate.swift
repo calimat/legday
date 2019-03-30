@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
+        DataService.instance.startWorkoutIntent = intent
+        
         debugPrint("AppDelegate: StartWorkout Intent - TRUE")
         debugPrint(intent)
         return true
