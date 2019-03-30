@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        return true
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard let intent = userActivity.interaction?.intent as? INStartWorkoutIntent else {
+            debugPrint("AppDelegate: StartWorkout Intent - FALSE")
+            return false
+        }
+        
+        debugPrint("AppDelegate: StartWorkout Intent - TRUE")
+        debugPrint(intent)
         return true
     }
 
